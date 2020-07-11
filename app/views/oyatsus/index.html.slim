@@ -1,0 +1,33 @@
+h1 Listing oyatsus
+
+table
+  thead
+    tr
+      th Name
+      th Category
+      th Image
+      th Detail
+      th Maker
+      th Watch at
+      th Site url
+      th
+      th
+      th
+
+  tbody
+    - @oyatsus.each do |oyatsu|
+      tr
+        td = oyatsu.name
+        td = oyatsu.category.name
+        td = oyatsu.image
+        td = oyatsu.detail
+        td = oyatsu.maker
+        td = oyatsu.watch_at
+        td = oyatsu.site_url
+        td = link_to 'Show', oyatsu
+        td = link_to 'Edit', edit_oyatsu_path(oyatsu)
+        td = link_to 'Destroy', oyatsu, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Oyatsu', new_oyatsu_path

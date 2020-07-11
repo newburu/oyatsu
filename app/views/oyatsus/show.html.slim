@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @oyatsu.name
+p
+  strong Category:
+  = @oyatsu.category.name
+p
+  strong Image:
+  = @oyatsu.image
+p
+  strong Detail:
+  = @oyatsu.detail
+p
+  strong Maker:
+  = @oyatsu.maker
+p
+  strong Watch at:
+  = @oyatsu.watch_at
+p
+  strong Site url:
+  = @oyatsu.site_url
+
+=> link_to 'Edit', edit_oyatsu_path(@oyatsu)
+'|
+=< link_to 'Back', oyatsus_path
