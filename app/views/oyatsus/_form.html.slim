@@ -1,0 +1,30 @@
+= form_for @oyatsu do |f|
+  - if @oyatsu.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@oyatsu.errors.count, "error")} prohibited this oyatsu from being saved:"
+      ul
+        - @oyatsu.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :category
+    = f.collection_select :category_id, Category.all, :id, :name
+  .field
+    = f.label :image
+    = f.text_field :image
+  .field
+    = f.label :detail
+    = f.text_area :detail
+  .field
+    = f.label :maker
+    = f.text_field :maker
+  .field
+    = f.label :watch_at
+    = f.date_select :watch_at
+  .field
+    = f.label :site_url
+    = f.text_field :site_url
+  .actions = f.submit
