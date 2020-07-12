@@ -8,7 +8,8 @@ p
   = @oyatsu.category.name
 p
   strong Image:
-  = @oyatsu.image
+  - if @oyatsu.image?
+    = image_tag @oyatsu.image.url
 p
   strong Detail:
   = @oyatsu.detail

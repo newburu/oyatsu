@@ -55,3 +55,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'slim-rails'
 gem 'active_hash'
+
+#画像アップロード
+gem 'carrierwave'
+#画像のリサイズ
+gem 'mini_magick'

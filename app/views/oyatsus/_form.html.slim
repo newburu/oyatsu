@@ -14,7 +14,7 @@
     = f.collection_select :category_id, Category.all, :id, :name
   .field
     = f.label :image
-    = f.text_field :image
+    = f.file_field :image
   .field
     = f.label :detail
     = f.text_area :detail
