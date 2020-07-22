@@ -63,3 +63,6 @@ gem 'mini_magick'
 
 # フォーム
 gem 'simple_form'
+
+# i18n
+gem 'rails-i18n'

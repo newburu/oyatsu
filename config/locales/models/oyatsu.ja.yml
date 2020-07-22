@@ -1,0 +1,34 @@
+ja:
+  activerecord:
+    attributes:
+      oyatsu:
+        name: 名前
+        category: カテゴリー
+        image: 画像
+        detail: 詳細
+        maker: メーカー
+        watch_at: 発見日
+        site_url: サイトURL
+        created_at: 登録日
+        updated_at: 更新日
+  oyatsus:
+    new:
+      title: おやつを登録する
+    index:
+      title: おやつを探す
+    edit:
+      title: おやつを編集する
+  oyatsu_form:
+    btn:
+      new: '新しいおやつを登録する'
+      show: '詳細を見てみる'
+      edit: '編集する'
+      destory: '削除'
+      copy_new: 'コピーして新しいおやつを登録する'
+
+  enums:
+    oyatsu:
+      open:
+        close: 非公開
+        full_open: 公開
+        url_open: URLがわかる人のみ公開
