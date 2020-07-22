@@ -1,30 +1,16 @@
-= form_for @oyatsu do |f|
-  - if @oyatsu.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@oyatsu.errors.count, "error")} prohibited this oyatsu from being saved:"
-      ul
-        - @oyatsu.errors.full_messages.each do |message|
-          li = message
+= simple_form_for(@oyatsu) do |f|
+  = f.error_notification
+  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :category
-    = f.collection_select :category_id, Category.all, :id, :name
-  .field
-    = f.label :image
-    = f.file_field :image
-  .field
-    = f.label :detail
-    = f.text_area :detail
-  .field
-    = f.label :maker
-    = f.text_field :maker
-  .field
-    = f.label :watch_at
-    = f.date_select :watch_at
-  .field
-    = f.label :site_url
-    = f.text_field :site_url
-  .actions = f.submit
+  .form-inputs
+    = f.input :name, input_html: {size: 50}
+    = f.input :category, as: :select, collection: Category.all
+    = f.input :image
+    = f.input :detail
+    = f.input :maker
+    = f.input :watch_at
+    = f.input :site_url
+
+  .form-actions
+    => f.button :submit, class: "btn btn-primary"
+    =< link_to t('simple_form.btn.back'), @oyatsu, class: "btn btn-secondary"

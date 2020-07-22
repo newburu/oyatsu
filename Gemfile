@@ -60,3 +60,6 @@ gem 'active_hash'
 gem 'carrierwave'
 #画像のリサイズ
 gem 'mini_magick'
+
+# フォーム
+gem 'simple_form'
